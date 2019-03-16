@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 
@@ -17,43 +16,37 @@ export default class SearchLocation extends React.Component {
                 fetchDetails={true}
                 renderDescription={row => row.description} // custom description render
                 onPress={(data, details = null) => { // 'details' is provided when fetchDetails = true
+                    let offset = details.utc_offset
                     let geoLoc = details.geometry.location
                     let city = details.vicinity
-                    this.props.getData(geoLoc, city)
+                    this.props.getData(geoLoc, city, offset)
                     this.props._toggleModal()
-
                 }}
-
-                getDefaultValue={() => ''}
-
                 query={{
                     // available options: https://developers.google.com/places/web-service/autocomplete
                     key: 'AIzaSyAYbCJWxydjPZHHg2KNXoOnr8osUqARAaw',
                     language: 'en', // language of the results
                     types: '(cities)' // default: 'geocode'
                 }}
-
                 styles={{
                     textInputContainer: {
-                        // width: '100%',
-                        // height: 20
+                        borderRadius: 10
                     },
                     description: {
-                        color: 'lightgray',
-                        fontWeight: 'bold',
-
+                        color: 'black',
+                        fontWeight: 'bold'
                     },
                     textInput: {
                         backgroundColor: 'lightgray',
                         height: 28,
                         fontSize: 15,
-
                     },
-                    poweredContainer: {
-                        backgroundColor: 'white',
-                    }
-                }}
 
+                    // poweredContainer: {
+                    //     backgroundColor: 'white',
+                    // }
+                }}
+                enablePoweredByContainer={false}
                 // currentLocation={true} // Will add a 'Current location' button at the top of the predefined places list
                 // currentLocationLabel="Current location"
                 // nearbyPlacesAPI='GooglePlacesSearch' // Which API to use: GoogleReverseGeocoding or GooglePlacesSearch
@@ -69,7 +62,7 @@ export default class SearchLocation extends React.Component {
                 filterReverseGeocodingByTypes={['locality', 'administrative_area_level_3']} // filter the reverse geocoding results by types - ['locality', 'administrative_area_level_3'] if you want to display only cities
 
 
-                debounce={200} // debounce the requests in ms. Set to 0 to remove debounce. By default 0ms.
+                debounce={0} // debounce the requests in ms. Set to 0 to remove debounce. By default 0ms.
             // renderLeftButton={() => <Image source={{ uri: 'https://res.cloudinary.com/tahelena/image/upload/v1551625538/WeatherApp/loupe.png' }} />}
             // renderRightButton={() => <Text>Custom text after the input</Text>}
             />
