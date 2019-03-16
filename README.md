@@ -16,12 +16,12 @@ You can do other google search but not look for a tutorial on how to make a weat
 
 ********************************************************************************************************************
 # Libraries used
- axios 0.18.0
- expo 32.0.0
- react 16.5.0
- react-native 32.0.0
- react-native-google-places-autocomplete 1.3.9
- react-native-modal 9.0.0
+    axios 0.18.0
+    expo 32.0.0
+    react 16.5.0
+    react-native 32.0.0
+    react-native-google-places-autocomplete 1.3.9
+    react-native-modal 9.0.0
  
  # Features
  
