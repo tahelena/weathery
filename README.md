@@ -25,8 +25,9 @@ You can do other google search but not look for a tutorial on how to make a weat
  
  # Features
  
-Fetch weather from external API (OpenWeatherMap)
-Search different location from external API (Google Autocomplete)
+   Fetch weather from external API (OpenWeatherMap).
+    
+   Search different location from external API (Google Autocomplete).
 
 # Developer
 
