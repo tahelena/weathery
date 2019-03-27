@@ -5,28 +5,31 @@ import SearchLocation from './SearchLocation';
 
 export default class TopBar extends React.Component {
 
-
     render() {
         let { _toggleModal, isModalVisible } = this.props
         return (
             <View
-
                 style={styles.container}>
 
-                <View style={styles.modal}>
+                <View style={{ flex: 1 }}>
                     <TouchableOpacity onPress={_toggleModal}>
                         <Image
                             style={styles.image}
                             source={{ uri: 'https://res.cloudinary.com/tahelena/image/upload/v1551625538/WeatherApp/loupe.png' }} />
                     </TouchableOpacity>
+
                     <Modal isVisible={isModalVisible}>
+
                         <View style={{ flex: 0.5, backgroundColor: 'lightgray', borderRadius: 10 }}>
+
                             <SearchLocation
                                 _toggleModal={_toggleModal}
                                 getData={this.props.getData} />
+
                             <TouchableOpacity onPress={_toggleModal} >
                                 <Text style={{ color: 'gray', fontSize: 20, margin: 10, textAlign: 'right' }}>Hide me!</Text>
                             </TouchableOpacity>
+
                         </View>
                     </Modal>
                 </View>
@@ -54,9 +57,6 @@ const styles = StyleSheet.create({
         marginRight: 20,
         overflow: 'visible',
 
-    },
-    modal: {
-        flex: 1,
     }
 
 })

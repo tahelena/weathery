@@ -40,11 +40,7 @@ export default class SearchLocation extends React.Component {
                         backgroundColor: 'lightgray',
                         height: 28,
                         fontSize: 15,
-                    },
-
-                    // poweredContainer: {
-                    //     backgroundColor: 'white',
-                    // }
+                    }
                 }}
                 enablePoweredByContainer={false}
                 // currentLocation={true} // Will add a 'Current location' button at the top of the predefined places list
