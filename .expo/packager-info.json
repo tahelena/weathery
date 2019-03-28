@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 24863,
+  "expoServerNgrokUrl": "https://hs-6g5.tahelena.weathery.exp.direct",
+  "packagerNgrokUrl": "https://packager.hs-6g5.tahelena.weathery.exp.direct",
+  "ngrokPid": 24910,
   "webpackServerPort": null
 }
