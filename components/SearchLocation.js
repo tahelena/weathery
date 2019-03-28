@@ -1,7 +1,6 @@
 import React from 'react';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-
-
+import { apiKey } from '../api'
 export default class SearchLocation extends React.Component {
 
 
@@ -24,7 +23,7 @@ export default class SearchLocation extends React.Component {
                 }}
                 query={{
                     // available options: https://developers.google.com/places/web-service/autocomplete
-                    key: 'AIzaSyAYbCJWxydjPZHHg2KNXoOnr8osUqARAaw',
+                    key: apiKey,
                     language: 'en', // language of the results
                     types: '(cities)' // default: 'geocode'
                 }}
